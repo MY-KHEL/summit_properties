@@ -67,10 +67,10 @@ const RealAbout = () => {
         <div className="py-4 lg:px-20">
             <div className="max-md:p-4 md:mt-12 mb-6">
                 <div className="grid md:grid-cols-2">
-                    <div className="col-span-1 mt-8 relative opacity-0" ref={imageRef}>
+                    <div className="col-span-1 mt-8 md:relative opacity-0" ref={imageRef}>
 
-                        <div className="w-3/4 h-full  bg-projectblue/80 rounded items-center flex relative " >
-                            <img src="./estate.jpg" alt="" className="w-full h-full cursor-pointer hover:top-2 hover:ease-in hover:left-2 absolute top-3 left-3 rounded" />
+                        <div className=" w-full md:w-3/4 h-full  bg-projectblue/80 rounded items-center flex md:relative " >
+                            <img src="./estate.jpg" alt="" className="w-full h-full cursor-pointer hover:top-2 hover:ease-in hover:left-2 md:absolute top-3 left-3 rounded" />
                         </div>
 
                     </div>
@@ -85,7 +85,6 @@ const RealAbout = () => {
                         With experts in every part of the world, we are local everywhere, allowing us to walk alongside our clients at every stage of their journey. With innovative technology and unrivaled service, we ensure that your home is connected with buyers, locally and worldwide.
                         </p>
 
-                        <Button value={'Read More'} classname={'mt-4'} />
                     </div>
 
                 </div>

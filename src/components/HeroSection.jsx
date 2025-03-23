@@ -48,8 +48,8 @@ const HeroSection = () => {
             <div  className="">
                 <div ref={heroRef} className="p-4 md:p-0 mt-6 grid grid-cols-1  gap-12 md:grid-cols-2 opacity-0">
                     <div className="col-span-1">
-                        <h1 className="text-5xl md:text-6xl text-projectblack font-semibold">
-                            Let's Find Your Dream  <span className="text-projectblue text-5xl md:text-7xl" ref={textRef}></span>
+                        <h1 className="text-4xl md:text-6xl text-projectblack font-semibold">
+                            Let's Find Your Dream  <span className="text-projectblue text-4xl md:text-7xl" ref={textRef}></span>
                         </h1>
                         <div className=""></div>
                         <p className="text-projectgrey text-md md:text-lg mt-4">

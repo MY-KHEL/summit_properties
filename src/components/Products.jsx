@@ -86,7 +86,7 @@ const Products = () => {
                             <img src="./estate.jpg" alt="" className="w-1/3 h-[60px]" />
                             <div>
                                 <h1 className="text-sm font-semibold">{product.title}</h1>
-                                <p className="text-sm">{product.small_text}</p>
+                                {/* <p className="text-sm"></p> */}
                             </div>
                             <div>
                                 <ArrowRight2 size="20" color="#52aeff" />
