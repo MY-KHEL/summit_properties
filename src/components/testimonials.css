@@ -1,0 +1,14 @@
+.swiper-pagination {
+    bottom: 15px !important; /* Adjust the value to move it further down */
+}
+.swiper-pagination-bullet {
+    background-color: gray !important; /* Default color */
+    opacity: 0.5;
+    
+}
+
+/* Change the active dot color */
+.swiper-pagination-bullet-active {
+    background-color:  #52aeff!important; /* Active dot color */
+    opacity: 1;
+}

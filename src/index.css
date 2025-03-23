@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+
+@theme {
+    --color-projectblue: #52aeff;
+    --color-projectblack: #2F2F2F;
+    --color-projectgrey: #797979;
+  }
+
+/* 16284c */
