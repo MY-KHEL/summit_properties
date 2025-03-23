@@ -57,6 +57,7 @@ function App() {
       </Routes>
 
       {/* ✅ Footer stays on all pages (EXCEPT when on "/contact") */}
+      
     </>
   );
 }

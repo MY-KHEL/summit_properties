@@ -3,6 +3,7 @@ import Button from "./molecules/Button";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Footer from "./Footer";
 
 gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger
 
@@ -90,6 +91,7 @@ const RealAbout = () => {
                 </div>
             </div>
             </div>
+            <Footer/>
         </>
     );
 }
