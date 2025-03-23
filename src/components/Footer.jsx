@@ -18,10 +18,33 @@ const Footer = () => {
                         <img src="./summit2.png" alt="" className="w-[100px]" />
                         <p className="text-2xl font-semibold underline mt-3">Get In Touch</p>
                         <p className="mt-3">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo
-                            dolore expedita exercitationem corrupti voluptatibus temporibus numquam
-                            ratione placeat qui nesciunt. Totam aspernatur sunt dicta quaerat veniam
-                            qui tempore voluptas in.
+                        Summit Properties
+🏡 Your Dream Home, Our Priority
+
+Stay connected with us for the latest property listings, expert real estate advice, and exclusive deals.
+
+<p> <Link to="tel:+2348179983075">
+                                <Call size="24" color="#797979" className="inline-flex items-center" /> Call Us
+                            </Link>  </p>
+<p className="my-2">  <Link
+                                to="https://wa.me/+2348179983075"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Whatsapp color="#797979" size={24} className="inline" /> Chat US
+                            </Link> </p>
+<p>  <Google color="#797979" size={24} className="inline" />  Send that mail today</p>
+
+
+{/* 📧 Email: info@summitproperties.com */}
+
+
+
+
+
+
+
+
                         </p>
                     </div>
 
@@ -50,23 +73,16 @@ const Footer = () => {
                         </form>
 
                         {/* Social Links */}
-                        <div className="flex mt-4 gap-6">
-                            <Link to="tel:+2348179983075">
-                                <Call size="24" color="#797979" />
-                            </Link>
-                            <Link
-                                to="https://wa.me/+2348179983075"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Whatsapp color="#797979" size={24} />
-                            </Link>
-                            <Google color="#797979" size={24} />
+                        <div className=" mt-4">
+                            <p>📢 Follow Us:
+Facebook | Instagram | Twitter | LinkedIn
+
+© 2025 Summit Properties. All rights reserved.</p>
+                          
+                            
                         </div>
 
-                        <p className="text-white/50 text-md mt-2">
-                            Click the icon above to contact us on the respective platform.
-                        </p>
+                        
                     </div>
                 </div>
             </div>
