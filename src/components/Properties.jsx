@@ -3,10 +3,13 @@ import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Properties = () => {
+    
+
     const [properties, setProperties] = useState([
         { id: 1, name: "Classic Apartment", price: "1,500,000", isFavourite: false, link: "/estate.jpg" },
         { id: 2, name: "Luxury Villa", price: "3,200,000", isFavourite: false, link: "/villa.jpg" },
@@ -46,8 +49,10 @@ const Properties = () => {
     };
 
     return (
-        <div className="p-4 mt-8">
+        <>
+        <div className="p-4 md:px-20 mt-8">
             <div className="text-center">
+                <h1 id="response"></h1>
                 <h1 className="text-2xl font-semibold text-projectblack">All Properties Types</h1>
                 <p className="text-projectgrey mt-2">
                     Discover a variety of properties that match your needs and lifestyle.
@@ -94,12 +99,10 @@ const Properties = () => {
                     </div>
                 ))}
             </div>
-             <Link to={'/products'}>
-            <button className="flex items-center mx-auto border-2 border-projectblue px-6 py-3 mt-6 cursor-pointer"> 
-                View All Properties  
-            </button>
-            </Link>
+          
         </div>
+        <Footer/>
+        </>
     );
 };
 

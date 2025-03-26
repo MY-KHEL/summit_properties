@@ -18,25 +18,31 @@ const Footer = () => {
                         <img src="./summit2.png" alt="" className="w-[100px]" />
                         <p className="text-2xl font-semibold underline mt-3">Get In Touch</p>
                         <p className="mt-3">
-                        Summit Properties
-🏡 Your Dream Home, Our Priority
+                            Summit Properties
+                            🏡 Your Dream Home, Our Priority
 
-Stay connected with us for the latest property listings, expert real estate advice, and exclusive deals.
+                            Stay connected with us for the latest property listings, expert real estate advice, and exclusive deals.
 
-<p> <Link to="tel:+2348179983075">
-                                <Call size="24" color="#797979" className="inline-flex items-center" /> Call Us
-                            </Link>  </p>
-<p className="my-2">  <Link
+                            <div> <Link to="tel:+18122398318" className="">
+                                <Call size="24" color="#797979" className="inline-flex items-center" /> <p className="inline-flex text-projectblue underline"> Call Us @ +18122398318</p>
+                            </Link>  </div>
+                            <div className="my-2">  <Link
                                 to="https://wa.me/+2348179983075"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <Whatsapp color="#797979" size={24} className="inline" /> Chat US
-                            </Link> </p>
-<p>  <Google color="#797979" size={24} className="inline" />  Send that mail today</p>
+                                <Whatsapp color="#797979" size={24} className="inline" /> <p className="inline-flex text-projectblue underline"> Chat with us</p>
+                            </Link> </div>
+                            <div className="my-2">  <Link
+                                to="mailto:contact@summitproperties.co.in"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                 <Google color="#797979" size={24} className="inline" /><p className="inline-flex text-projectblue underline">Send that mail today</p>
+                            </Link> </div>
 
+                         
 
-{/* 📧 Email: info@summitproperties.com */}
 
 
 
@@ -75,14 +81,14 @@ Stay connected with us for the latest property listings, expert real estate advi
                         {/* Social Links */}
                         <div className=" mt-4">
                             <p>📢 Follow Us:
-Facebook | Instagram | Twitter | LinkedIn
+                                Facebook | Instagram | Twitter | LinkedIn
 
-© 2025 Summit Properties. All rights reserved.</p>
-                          
-                            
+                                © 2025 Summit Properties. All rights reserved.</p>
+
+
                         </div>
 
-                        
+
                     </div>
                 </div>
             </div>
