@@ -101,7 +101,7 @@ const Properties = () => {
             </div>
           
         </div>
-        <Footer/>
+        
         </>
     );
 };
