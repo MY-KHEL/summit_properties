@@ -40,7 +40,7 @@ const Navbar = () => {
                 {/* Desktop Button */}
                 <div className="hidden md:inline-flex">
                 <span className="text-lg mr-5 cursor-pointer flex items-center "onClick={handleSearchForm}>
-                       <SearchNormal color="black" size={20}  className="inline" />  Search
+                        Search
                     </span>
                     <Link to={"/contact"}>
                         <Button value={"Get in Touch"} classname={"cursor-pointer"} />
@@ -75,22 +75,22 @@ const Navbar = () => {
 
             {/* Mobile Navigation Menu */}
             <div
-                className={`fixed top-0 left-0 h-full w-full bg-white transition-transform duration-300 ${
-                    menuOpen ? "translate-x-0" : "-translate-x-full"
+                className={` md:hidden fixed top-0 right-0 h-full w-8/8 bg-white transition-transform duration-300 ${
+                    menuOpen ? "translate-x-0" : "translate-x-full"
                 } z-50`}
             >
                 {/* Close Button */}
-                <div className="flex justify-end p-4">
+                <div className="flex justify-end p-2 ">
                     <CloseCircle size="30" color="#52aeff" onClick={() => setMenuOpen(false)} className="cursor-pointer mt-2" />
                 </div>
 
                 {/* Navigation Links */}
-                <div className="flex flex-col p-4 space-y-3">
+                <div className="flex flex-col px-8   ">
                     {navLinks.map((link, index) => (
                         <Link
                             key={index}
                             to={link.path}
-                            className="text-lg px-4 py-2 hover:text-projectblue"
+                            className="text-lg py-2 hover:text-projectblue"
                             onClick={() => setMenuOpen(false)} // ✅ Close menu on click
                         >
                             {link.title}
@@ -101,11 +101,11 @@ const Navbar = () => {
                 {/* Mobile CTA Button */}
                 <div className="px-8 py-2">
                     <span className="text-lg text-projectblue "onClick={handleSearchForm}>
-                       <SearchNormal color="black" size={20}  className="inline" />  &nbsp; Search
+                        Search
                     </span>
                     
                     <Link to={"https://wa.me/+2348179983075"}>
-                        <Button value={"Get Started"} classname={"w-full mt-4"} />
+                        <Button value={"Get Started"} classname={"w-8/8 mt-4"} />
                     </Link>
                 </div>
             </div>
