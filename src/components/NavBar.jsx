@@ -1,17 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Button from "./molecules/Button";
-import { HambergerMenu, CloseCircle, SearchNormal } from "iconsax-react";
+import { HambergerMenu, CloseCircle } from "iconsax-react";
 import SearchForm from "./SearchForm";
 
 const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false); // ✅ State to toggle mobile menu
-    const [searchFormOpen, setSearchFormOpen] = useState(false); // State for toggling the search form
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [searchFormOpen, setSearchFormOpen] = useState(false);
+    const [isMounted, setIsMounted] = useState(false); // Ensures smooth initial load
 
-    const handleSearchForm = () => {
-        setSearchFormOpen(!searchFormOpen); // Toggle search form visibility
-    };
+    useEffect(() => {
+        setIsMounted(true); // Marks component as mounted
+    }, []);
 
+    useEffect(() => {
+        // Disable scrolling when menu is open
+        if (menuOpen) {
+            document.body.style.overflow = "hidden";
+            document.body.style.width = "100%";  // Ensure no horizontal overflow
+        } else {
+            document.body.style.overflow = "auto";
+            document.body.style.width = "auto"; // Restore width when closed
+        }
+    }, [menuOpen]);
+    
     const navLinks = [
         { title: "Home", path: "/" },
         { title: "About Us", path: "/about" },
@@ -39,7 +51,7 @@ const Navbar = () => {
 
                 {/* Desktop Button */}
                 <div className="hidden md:inline-flex">
-                <span className="text-lg mr-5 cursor-pointer flex items-center "onClick={handleSearchForm}>
+                    <span className="text-lg mr-5 cursor-pointer flex items-center" onClick={() => setSearchFormOpen(!searchFormOpen)}>
                         Search
                     </span>
                     <Link to={"/contact"}>
@@ -61,11 +73,8 @@ const Navbar = () => {
             {/* Search Form */}
             {searchFormOpen && (
                 <div className="fixed top-0 left-0 md:px-20 py-0 w-full  bg-white/2   z-70 flex justify-end ">
-                    <div className="relative w-full h-screen md:h-full md:w-3/4 max-w-md md:mt-20 md:-left-15 top-0 bg-white rounded-lg shadow-lg">
-                        <button
-                            className="absolute top-0 right-0 p-2"
-                            onClick={handleSearchForm} // Close search form on click
-                        >
+                    <div className="relative w-full h-screen md:h-full md:w-3/4 max-w-md md:mt-20 bg-white rounded-lg shadow-lg">
+                        <button className="absolute top-0 right-0 p-2" onClick={() => setSearchFormOpen(false)}>
                             <CloseCircle size="24" color="#52aeff" />
                         </button>
                         <SearchForm />
@@ -75,23 +84,24 @@ const Navbar = () => {
 
             {/* Mobile Navigation Menu */}
             <div
-                className={` md:hidden fixed top-0 right-0 h-full w-8/8 bg-white transition-transform duration-300 ${
-                    menuOpen ? "translate-x-0" : "translate-x-full"
-                } z-50`}
-            >
+    className={`fixed top-0 right-0 h-full w-full px-4 overflow-x-hidden bg-white transition-transform duration-300 ease-in-out ${
+        isMounted ? (menuOpen ? "translate-x-0" : "translate-x-full") : "translate-x-full"
+    } z-50 md:hidden`}
+>
+
                 {/* Close Button */}
-                <div className="flex justify-end p-2 ">
+                <div className="flex justify-start ">
                     <CloseCircle size="30" color="#52aeff" onClick={() => setMenuOpen(false)} className="cursor-pointer mt-2" />
                 </div>
 
                 {/* Navigation Links */}
-                <div className="flex flex-col px-8   ">
+                <div className="flex flex-col">
                     {navLinks.map((link, index) => (
                         <Link
                             key={index}
                             to={link.path}
-                            className="text-lg py-2 hover:text-projectblue"
-                            onClick={() => setMenuOpen(false)} // ✅ Close menu on click
+                            className="text-lg py-4 hover:text-projectblue"
+                            onClick={() => setMenuOpen(false)}
                         >
                             {link.title}
                         </Link>
@@ -99,13 +109,12 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile CTA Button */}
-                <div className="px-8 py-2">
-                    <span className="text-lg text-projectblue "onClick={handleSearchForm}>
+                <div className=" w-full">
+                    <span className="text-lg text-projectblue" onClick={() => setSearchFormOpen(true)}>
                         Search
                     </span>
-                    
                     <Link to={"https://wa.me/+2348179983075"}>
-                        <Button value={"Get Started"} classname={"w-8/8 mt-4"} />
+                        <Button value={"Get Started"} classname={"w-3/4 block mt-4"} />
                     </Link>
                 </div>
             </div>

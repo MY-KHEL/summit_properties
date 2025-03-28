@@ -11,7 +11,7 @@ const Footer = () => {
 
     return (
         <div className="bg-projectblack w-full p-4 md:px-20 text-white/50">
-            <div className="md:mt-20">
+            <div className="md:mt-20 mt-15">
                 <div className="grid md:grid-cols-3">
                     {/* Contact Section */}
                     <div>
