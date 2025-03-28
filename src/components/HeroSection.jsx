@@ -64,6 +64,20 @@ const HeroSection = () => {
                             We give you the lifestyle that fits you.
                         </p>
                         <Link to={'/products'}><Button value={'Find a House'} classname={'mt-4 cursor-pointer'} /></Link>
+                        <div className="mt-6 md:flex justify-between w-full">
+                            <div className="text-center md:border-r border-projectgrey/30">
+                                <h1 className="text-3xl text-projectblue font-semibold">&#36;120M+</h1>
+                                <p className="text-projectgrey">processed across all of our clients</p>
+                            </div>
+                            <div className="text-center max-md:mt-4 md:border-r border-projectgrey/30">
+                                <h1 className="text-3xl text-projectblue font-semibold">300</h1>
+                                <p className="text-projectgrey">clients in our experts database</p>
+                            </div>
+                            <div className="text-center">
+                                <h1 className="text-3xl max-md:mt-4 text-projectblue font-semibold">&#36;10M+</h1>
+                                <p className="text-projectgrey">of seed funding from various investors</p>
+                            </div>
+                        </div>
                     </div>
                     <div className="col-span-1 relative mt-0">
                         <div className="w-full h-full bg-projectblue/40 blur-[72px] hidden md:inline rounded-full absolute top-0"></div>
