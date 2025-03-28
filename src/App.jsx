@@ -12,11 +12,11 @@ import RealAbout from "./components/RealAbout";
 const Home = ({ footerRef }) => {
   return (
     <>
-      <div className="py-4 lg:px-20">
+      <div className=" w-full py-4 lg:px-20">
       <HeroSection />
         
       </div>
-      <div className="py-4 lg:px-20">
+      <div className=" w-full py-4 lg:px-20">
         <About />
         <Products />
         <Properties />
@@ -25,7 +25,7 @@ const Home = ({ footerRef }) => {
         <Testimonials />
       </div>
       {/* ✅ Footer with ref for scrolling */}
-      <div ref={footerRef}>
+      <div ref={footerRef} className="w-full">
         <Footer />
       </div>
     </>

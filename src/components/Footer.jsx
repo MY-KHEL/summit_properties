@@ -11,7 +11,7 @@ const Footer = () => {
 
     return (
         <div className="bg-projectblack w-full p-4 md:px-20 text-white/50">
-            <div className="mt-20">
+            <div className="md:mt-20">
                 <div className="grid md:grid-cols-3">
                     {/* Contact Section */}
                     <div>
@@ -26,13 +26,7 @@ const Footer = () => {
                             <div> <Link to="tel:+18122398318" className="">
                                 <Call size="24" color="#797979" className="inline-flex items-center" /> <p className="inline-flex text-projectblue underline"> Call Us @ +18122398318</p>
                             </Link>  </div>
-                            <div className="my-2">  <Link
-                                to="https://wa.me/+2348179983075"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Whatsapp color="#797979" size={24} className="inline" /> <p className="inline-flex text-projectblue underline"> Chat with us</p>
-                            </Link> </div>
+                     
                             <div className="my-2">  <Link
                                 to="mailto:contact@summitproperties.co.in"
                                 target="_blank"
