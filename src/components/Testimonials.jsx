@@ -15,9 +15,9 @@ const testimonials = [
     { id: 1, name: "John Doe", role: "CEO, TechCorp", text: "This product has changed my life! Highly recommended.", image: "/john.jpg" },
     { id: 2, name: "Jane Smith", role: "Marketing Manager", text: "Incredible service and support. Exceeded my expectations!", image: "/jane.jpg" },
     { id: 3, name: "Michael Brown", role: "Software Engineer", text: "A must-have for any professional. Great experience overall.", image: "/michael.jpg" },
-    { id: 4, name: "Eric Bright", role: "Software Engineer", text: "A must-have for any professional. Great experience overall.", image: "/michael.jpg" },
-    { id: 5, name: "Bil Brown", role: "Software Engineer", text: "A must-have for any professional. Great experience overall.", image: "/michael.jpg" },
-    { id: 6, name: "Michael Adeyinka", role: "Software Engineer", text: "A must-have for any professional. Great experience overall.", image: "/michael.jpg" },
+    { id: 4, name: "Eric Bright", role: "Architect", text: "The team guided us through every step of the process and made it stress-free!", image: "/michael.jpg" },
+    { id: 5, name: "Bil Brown", role: "Software Engineer", text: "They helped us secure the perfect office space in a prime location. Highly recommend!", image: "/michael.jpg" },
+    { id: 6, name: "Michael Adeyinka", role: "Civil Engineer", text: "We sold our home faster than expected and above the asking price! .", image: "/michael.jpg" },
 ];
 
 const Testimonials = () => {

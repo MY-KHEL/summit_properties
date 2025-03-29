@@ -8,6 +8,7 @@ import Properties from "./components/Properties";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import RealAbout from "./components/RealAbout";
+import Agents from "./components/Agents";
 
 const Home = ({ footerRef }) => {
   return (
@@ -20,6 +21,7 @@ const Home = ({ footerRef }) => {
         <About />
         <Products />
         <Properties />
+        <Agents/>
       </div>
       <div>
         <Testimonials />
